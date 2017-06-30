@@ -42,7 +42,7 @@ int ledState;
 int Loop =1;
 
 unsigned long xxx=5000;
-String numm1 = "+79625840013";
+
 
 void setup()
 {   
@@ -376,7 +376,7 @@ String numm = currStr.substring(currStr.indexOf("\""),currStr.indexOf(",")); // 
 //                //если строка начинается с CMT то далее следует номер
 //                  String numm = currStr.substring(currStr.indexOf("+"),currStr.indexOf(":")); // выделяем номер и запоминаем в переменную num                  
 //                  Serial.print (numm);
-                if (!numm.compareTo ("\"+79625840013\""))  {
+                if (!numm.compareTo ("\"+7xxxxxxxxxx\""))  {
                   //Serial.println ("1");
                   isStringMessage = true;    
                 }                 
@@ -395,7 +395,7 @@ void sendTextMessage() {
     gprsSerial.print("AT+CMGF=1\r");
     delay(100); // даём время на усваивание команды
     // Устанавливаем адресата: телефонный номер в международном формате
-//    gprsSerial.println("AT + CMGS = \"+79625840013\"");
+//    gprsSerial.println("AT + CMGS = \"+7xxxxxxxxxx\"");
 //    delay(100);
     //---------------------------------------------------------------------------------------------  
 //  int cmd = nextByte();
